@@ -1,8 +1,8 @@
 version: 2
+# Fichero para indicarle a DBT donde esta la capa bronze. UN SOURCE POR ESQUEMA.
 
 sources:
-
-  - name: google_sheets # name of the source 
+  - name: google_sheets # name of the source -> ES LO QUE SE REFERENCIARA EN EL SOURCE
     schema: google_sheets # this is the schema our raw data lives in
     database: ALUMNO5_DEV_BRONZE_DB # this is the name of our database
 
@@ -11,12 +11,12 @@ sources:
       schema: false
       identifier: false
 
+    # Si no se han ingestado datos en 24 o 48 horas al verificar la frescura de la tabla eligiremos el aviso que queremos que nos de.
     freshness:
-      warn_after: {count: 24, period: hour}
-      error_after: {count: 48, period: hour}
+      warn_after: { count: 24, period: hour }
+      error_after: { count: 48, period: hour }
 
     tables:
-
       - name: budget
         loaded_at_field: _fivetran_synced
         columns:
