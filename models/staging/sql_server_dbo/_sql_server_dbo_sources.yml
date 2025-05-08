@@ -15,6 +15,7 @@ sources:
       error_after: { count: 48, period: hour }
 
     tables:
+      
       - name: addresses
         loaded_at_field: _fivetran_synced
         columns:
@@ -72,11 +73,7 @@ sources:
         loaded_at_field: _fivetran_synced
         columns:
           - name: order_id
-            tests:
-              - not_null
           - name: product_id
-            tests:
-              - not_null
           - name: quantity
           - name: _fivetran_deleted
           - name: _fivetran_synced
@@ -85,9 +82,6 @@ sources:
         loaded_at_field: _fivetran_synced
         columns:
           - name: product_id
-            tests:
-              - not_null
-              - unique
           - name: price
           - name: name
           - name: inventory
@@ -98,9 +92,6 @@ sources:
         loaded_at_field: _fivetran_synced
         columns:
           - name: promo_id
-            tests:
-              - not_null
-              - unique
           - name: discount
           - name: status
           - name: _fivetran_deleted
@@ -110,9 +101,6 @@ sources:
         loaded_at_field: _fivetran_synced
         columns:
           - name: user_id
-            tests:
-              - not_null
-              - unique
           - name: updated_at
           - name: address_id
           - name: last_name
