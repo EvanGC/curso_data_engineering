@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: budget
+  - name: stg_budget
     columns:
       - name: _row
         tests:
@@ -11,7 +11,7 @@ models:
         tests:
           - not_null
           - relationships:
-                to: ref('stgstg_products')
+                to: ref('stg_products')
                 field: product_id  
       - name: quantity
         tests:
