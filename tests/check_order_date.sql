@@ -1,3 +1,3 @@
 SELECT *
-FROM {{ ref('stg_sql_server_dbo__orders') }}
+FROM {{ ref('stg_orders') }}
 WHERE delivered_at < created_at

@@ -4,12 +4,12 @@ with orders as (
         order_cost,
         order_total,
         shipping_cost
-    from {{ ref('stg_sql_server_db__orders') }}
+    from {{ ref('stg_db__orders') }}
 ),
 
 products as (
     select *
-    from {{ ref('stg_sql_server_dbo__promos') }}
+    from {{ ref('stg_dbo__promos') }}
 ),
 
 order_total (
