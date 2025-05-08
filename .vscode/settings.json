@@ -1,0 +1,9 @@
+{
+  "dbt.enableNewLineagePanel": true,
+  "dbt.dbtIntegration": "cloud",
+  "dbt.deferConfigPerProject": {
+    "": {
+      "deferToProduction": false
+    }
+  }
+}

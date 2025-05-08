@@ -1,5 +1,5 @@
 models:
-  - name: stg_sql_server_dbo__promos
+  - name: stg_promos
     description: ""
     columns:
       - name: promo_id
@@ -32,12 +32,7 @@ models:
         data_type: timestamp_tz
         description: ""
 
-  - name: stg_sql_server_dbo__orders
-#    tests:
-#      - dbt_utils.unique_combination_of_columns:
-#          combination_of_columns:
-#            - order_id
-#            - address_id
+  - name: stg_orders
     description: ""
     columns:
       - name: order_id
@@ -112,7 +107,7 @@ models:
         data_type: timestamp_tz
         description: ""
 
-  - name: stg_sql_server_dbo__order_items
+  - name: stg_order_items
     description: ""
     columns:
       - name: order_id
@@ -135,7 +130,7 @@ models:
         data_type: timestamp_tz
         description: ""
 
-  - name: stg_sql_server_dbo__addresses
+  - name: stg_addresses
     description: ""
     columns:
       - name: address_id
@@ -166,7 +161,7 @@ models:
         data_type: timestamp_tz
         description: ""
   
-  - name: stg_sql_server_dbo__events
+  - name: stg_events
     description: ""
     columns:
       - name: event_id
@@ -209,7 +204,7 @@ models:
         data_type: timestamp_tz
         description: ""
 
-  - name: stg_sql_server_dbo__products
+  - name: stg_products
     description: ""
     columns:
       - name: product_id
@@ -236,7 +231,7 @@ models:
         data_type: timestamp_tz
         description: ""
 
-  - name: stg_sql_server_dbo__users
+  - name: stg_users
     description: ""
     columns:
       - name: user_id
